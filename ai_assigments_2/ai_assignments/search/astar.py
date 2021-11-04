@@ -19,7 +19,25 @@ class ASTAR(object):
     # - to get items out of the PriorityQueue, use 'pq.get()'
     # - use a 'set()' to store nodes that were already visited
     def solve(self, problem: Problem):
-        return None
+        visited = set()
+        queue = PriorityQueue()
+
+        current = problem.get_start_node()
+
+        while not problem.is_end(current):
+
+            successors = problem.successors(current)
+
+            if current not in visited:
+                visited.add(current)  # mark current element as visited
+                for s in successors:
+                    queue.put(s.cost + self.heuristic(s, problem.get_end_node()),
+                              s)  # put successor into queue if it has not been visited
+
+            if queue.has_elements():  # check if queue has elements left
+                current = queue.get()
+
+        return current
 
 
 # this is the ASTAR variant with the euclidean distance as a heuristic
