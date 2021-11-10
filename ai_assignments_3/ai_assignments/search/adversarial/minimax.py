@@ -1,4 +1,4 @@
-from ... game import Game
+from ai_assignments.game import Game
 
 
 class Minimax():
@@ -27,7 +27,6 @@ class Minimax():
             else:
                 return -1, node
 
-        # TODO, Exercise 3: implement the minimax algorithm recursively here
         # to help you get started, we laid out the basic structure of the
         # algorithm
         if node.player == max_player:
@@ -37,7 +36,11 @@ class Minimax():
             best_value = float('-Inf')
             best_node = None
 
-            # TODO implement logic for MAX player
+            for s in game.successors(node):
+                value, node = self.minimax(game, s, max_player)
+                if value > best_value:
+                    best_value = value
+                    best_node = node
 
             return best_value, best_node
         else:
@@ -47,6 +50,10 @@ class Minimax():
             best_value = float('Inf')
             best_node = None
 
-            # TODO implement logic for MIN player
+            for s in game.successors(node):
+                value, node = self.minimax(game, s, max_player)
+                if value < best_value:
+                    best_value = value
+                    best_node = node
 
             return best_value, best_node
