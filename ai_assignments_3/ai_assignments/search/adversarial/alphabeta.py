@@ -1,4 +1,4 @@
-from ... game import Game
+from ...game import Game
 
 
 class AlphaBeta():
@@ -34,6 +34,39 @@ class AlphaBeta():
         # TODO, Exercise 3: implement the minimax-with-alpha-beta-pruning algorithm
         # recursively here. the structure is almost the same as for minimax
 
-        # this is just here so that no error is thrown with the stub-implementation
-        # you can delete this, when you start implementing
-        return None, None
+        if node.player == max_player:
+
+            # this is how you get minus infinity as a 'value' (smaller than all other numbers)
+            best_value = float('-Inf')
+            best_node = None
+
+            for s in game.successors(node):
+                value, node = self.alphabeta(game, s, alpha, beta, max_player)
+                if value > best_value:
+                    best_value = value
+                    best_node = node
+
+                if best_value >= beta:
+                    return best_value, best_node
+
+                alpha = max(alpha, best_value)
+
+            return best_value, best_node
+        else:
+
+            # this is how you get plus infinity as a 'value' (larger than all other numbers)
+            best_value = float('Inf')
+            best_node = None
+
+            for s in game.successors(node):
+                value, node = self.alphabeta(game, s, alpha, beta, max_player)
+                if value < best_value:
+                    best_value = value
+                    best_node = node
+
+                if best_value <= alpha:
+                    return best_value, best_node
+
+                beta = min(beta, best_value)
+
+            return best_value, best_node
