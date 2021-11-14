@@ -1,4 +1,4 @@
-from .. environment import Environment, Outcome
+from ..environment import Environment, Outcome
 import numpy as np
 
 
@@ -7,11 +7,9 @@ def eps_greedy(rng, qs, epsilon):
     if rng.uniform(0, 1) < epsilon:
         # - with probability p == epsilon, an action is
         # chosen uniformly at random
-        pass
+        return rng.choice(list(qs.keys()))
     else:
-        # - with probability p == 1 - epsilon, the action
-        #   having the currently largest q-value estimate is chosen
-        pass
+        return np.argmax(qs)
 
 
 class QLearning():
@@ -39,6 +37,18 @@ class QLearning():
             # TODO, exercise 3, generate an episode
             # with an eps_greedy policy, and then
             # implement the q-learning update here
+            current_state = env.reset()
+
+            done = False
+
+            while not done:
+                action = eps_greedy(rng, Q[current_state], epsilon)
+                state, reward, done = env.step(action)
+
+                Q[current_state][action] += alpha * (
+                            reward + gamma * np.argmax(Q[state]) - Q[current_state][action])
+
+                current_state = state
 
             # you interact with the environment
             # ONLY via the methods
@@ -57,7 +67,7 @@ class QLearning():
             # which state you actually ended up in,
             # what the immediate reward was, and whether
             # or not the episode ended.
-            pass
+
         ########################################
 
         ########################################

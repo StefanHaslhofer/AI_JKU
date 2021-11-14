@@ -18,8 +18,8 @@ def main():
         epilog=textwrap.dedent('''
         example usage:
 
-        $ python solve.py test/board.json rs
-        this loads the problem instance stored in 'test/board.json' and computes
+        $ python solve.py test/environment.json rs
+        this loads the problem instance stored in 'test/environment.json' and computes
         a solution path with the solver named 'rs', stored in 'test/rs.path'
         '''),
         formatter_class=argparse.RawDescriptionHelpFormatter

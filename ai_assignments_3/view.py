@@ -23,12 +23,12 @@ def main():
         epilog=textwrap.dedent('''
         example usage:
 
-        $ python view.py test/board.json test/bfs.path
-        this will view the problem instance 'test/board.json', and superimpose
+        $ python view.py test/environment.json test/bfs.path
+        this will view the problem instance 'test/environment.json', and superimpose
         the path 'test/bfs.path' on top of both views.
 
-        $ python view.py test/board.json test/*.path
-        this will view the problem instance 'test/board.json', and superimpose
+        $ python view.py test/environment.json test/*.path
+        this will view the problem instance 'test/environment.json', and superimpose
         ALL the files in the directory 'test', that end in '.path'
         '''),
         formatter_class=argparse.RawDescriptionHelpFormatter

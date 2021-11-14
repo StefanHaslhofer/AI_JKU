@@ -14,19 +14,19 @@ def main():
         epilog=textwrap.dedent('''
         example usage:
 
-        $ python generate.py maze 10 test/board.json
+        $ python generate.py maze 10 test/environment.json
         this generates a random 10x10 board in the shape of a maze,
-        and writes the problem instance into the file 'test/board.json'.
+        and writes the problem instance into the file 'test/environment.json'.
 
-        $ python generate.py terrain 50 test/board.json
+        $ python generate.py terrain 50 test/environment.json
         this generates a random 50x50 board that tries to simulate terrain
         with different movement costs per state, and writes the problem instance
-        into the file 'test/board.json'
+        into the file 'test/environment.json'
 
-        $ python generate.py rooms 20 test/board.json
+        $ python generate.py rooms 20 test/environment.json
         this generates a random 20x20 board that consists of various
         rooms with doors, and writes the problem instance into
-        the file 'test/board.json'
+        the file 'test/environment.json'
         '''),
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
