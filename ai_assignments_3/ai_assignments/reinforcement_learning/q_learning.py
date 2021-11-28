@@ -7,9 +7,9 @@ def eps_greedy(rng, qs, epsilon):
     if rng.uniform(0, 1) < epsilon:
         # - with probability p == epsilon, an action is
         # chosen uniformly at random
-        return rng.choice(list(qs.keys()))
+        return rng.choice(list(qs))
     else:
-        return np.argmax(qs)
+        return max(qs, key=qs.get)
 
 
 class QLearning():
@@ -46,7 +46,7 @@ class QLearning():
                 state, reward, done = env.step(action)
 
                 Q[current_state][action] = Q[current_state][action] + alpha * (
-                            reward + gamma * np.argmax(Q[state]) - Q[current_state][action])
+                            reward + gamma * (Q[state][max(Q[state], key=Q[state].get)]) - Q[current_state][action])
 
                 current_state = state
 
