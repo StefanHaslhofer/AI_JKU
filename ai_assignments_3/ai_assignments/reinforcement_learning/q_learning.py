@@ -45,7 +45,7 @@ class QLearning():
                 action = eps_greedy(rng, Q[current_state], epsilon)
                 state, reward, done = env.step(action)
 
-                Q[current_state][action] += alpha * (
+                Q[current_state][action] = Q[current_state][action] + alpha * (
                             reward + gamma * np.argmax(Q[state]) - Q[current_state][action])
 
                 current_state = state
