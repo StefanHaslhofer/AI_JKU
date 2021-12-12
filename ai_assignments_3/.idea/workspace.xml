@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52dd2f8a-6b5d-4850-bdc2-49d628904f57" name="Changes" comment="env">
+    <list default="true" id="52dd2f8a-6b5d-4850-bdc2-49d628904f57" name="Changes" comment="finished q-learning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_assignments/reinforcement_learning/q_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments/reinforcement_learning/q_learning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/q3/q_learning.hash" beforeDir="false" afterPath="$PROJECT_DIR$/q3/q_learning.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/q3/q_learning.outcome" beforeDir="false" afterPath="$PROJECT_DIR$/q3/q_learning.outcome" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,10 @@
       <workItem from="1636931533591" duration="636000" />
       <workItem from="1636932357508" duration="706000" />
       <workItem from="1637422291836" duration="2151000" />
-      <workItem from="1637435460998" duration="840000" />
+      <workItem from="1637435460998" duration="1660000" />
+      <workItem from="1637512957424" duration="21000" />
+      <workItem from="1637513133327" duration="675000" />
+      <workItem from="1639302660988" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="alphabeta">
       <created>1636805376831</created>
@@ -138,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636931557048</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finished q-learning">
+      <created>1637436359709</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637436359709</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,18 +167,10 @@
     <MESSAGE value="alphabeta" />
     <MESSAGE value="q_learning (not yet functional)" />
     <MESSAGE value="env" />
-    <option name="LAST_COMMIT_MESSAGE" value="env" />
+    <MESSAGE value="finished q-learning" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished q-learning" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ai_assignments/reinforcement_learning/q_learning.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="rng.argmax(Q[state])" language="Python" />
@@ -195,7 +194,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ai_assignments_3$observe.coverage" NAME="observe Coverage Results" MODIFIED="1636902323916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ai_assignments_3$train.coverage" NAME="train Coverage Results" MODIFIED="1637435908646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ai_assignments_3$train.coverage" NAME="train Coverage Results" MODIFIED="1637436310041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ai_assignments_3$replay.coverage" NAME="replay Coverage Results" MODIFIED="1636584579193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ai_assignments_3$minimax.coverage" NAME="play Coverage Results" MODIFIED="1636585052681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ai_assignments_3$play.coverage" NAME="train Coverage Results" MODIFIED="1636827738001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
