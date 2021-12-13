@@ -44,7 +44,11 @@ class DecisionTreeNode():
             # TODO: check for consecutive samples whether the labels and features are different
             # be careful to not compare the 0th sample with the last sample when indexing
             # if labels and feature values are different, compute splitting values and add to list as shown above
-
+            for s_idx in range(nr_samples-1):
+                # label and feature must be different in order to add the tupel to the list
+                if labels[s_idx] != labels[s_idx+1] and features[s_idx, f_idx] != features[s_idx+1, f_idx]:
+                    split_at = (features[s_idx, f_idx] + features[s_idx+1, f_idx])/2
+                    split_points.append((f_idx, split_at))
         return split_points
 
     def get_optimal_split_point(self, features, labels):
@@ -56,7 +60,11 @@ class DecisionTreeNode():
         # loop over all possible splitting points that you computed and return the best one
         for (f_idx, split_at) in possible_split_points:
             # TODO: compute information gain for splitting points and store the best one
-            pass
+            ig = self.get_information_gain(features, labels, (f_idx, split_at))
+            if ig > current_best_ig:
+                current_best_ig = ig
+                split_feature, split_point = f_idx, split_at
+
         return split_feature, split_point
 
     def get_information_gain(self, x, y, split_point):
@@ -65,6 +73,10 @@ class DecisionTreeNode():
         # TODO: implement the information gain as described in the slides
         # use the provided entropy() function
         # use <= and > for comparison (to get a comparable result)
+        features = x[:, split_point[0]] # get features we based on split_point
+        leftIndices = np.where(features <= split_point[1])[0]
+        rightInices = np.where(features > split_point[1])[0]
+        ig = entropy(y) - len(leftIndices)/len(y)*entropy(y[leftIndices]) - len(rightInices)/len(y)*entropy(y[rightInices])
 
         return ig
 
@@ -76,6 +88,21 @@ class DecisionTreeNode():
         # call split(X_left, y_left) and split(X_right, y_right) to recursively create the tree
         # again: use <= and > for comparison
 
+        if np.all(y == y[0]):
+            # set label if all labels of node are equal
+            self.label = y[0]
+        else:
+            self.split_feature, self.split_point = self.get_optimal_split_point(X, y)
+
+            features = X[:, self.split_feature]  # get features we based on split_point
+            leftIndices = np.where(features <= self.split_point)[0] # indices of values below the split point
+            rightInices = np.where(features > self.split_point)[0] # indices of values above the split point
+
+            # initialize childs as nodes
+            self.left_child = DecisionTreeNode()
+            self.right_child = DecisionTreeNode()
+            self.left_child.split(X[leftIndices], y[leftIndices])
+            self.right_child .split(X[rightInices], y[rightInices])
         return self
 
     def __str__(self):

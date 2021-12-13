@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52dd2f8a-6b5d-4850-bdc2-49d628904f57" name="Changes" comment="finished q-learning">
+      <change afterPath="$PROJECT_DIR$/../ai_assignments_4/q1/board.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ai_assignments_4/test/board.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai_assignments_4/.idea/ai_assignments_4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ai_assignments_4/.idea/ai_assignments_4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai_assignments_4/ai_assignments/decision_tree/id3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ai_assignments_4/ai_assignments/decision_tree/id3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +120,8 @@
       <workItem from="1637512957424" duration="21000" />
       <workItem from="1637513133327" duration="675000" />
       <workItem from="1639302660988" duration="1202000" />
+      <workItem from="1639341367471" duration="23000" />
+      <workItem from="1639341416606" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="alphabeta">
       <created>1636805376831</created>
