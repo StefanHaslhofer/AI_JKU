@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2611d929-6728-4a7c-b0d7-6264e176e7b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ai_assignment_5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ai_assignment_5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_assignments.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_assignments.egg-info/dependency_links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments.egg-info/dependency_links.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_assignments.egg-info/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments.egg-info/requires.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_assignments.egg-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments.egg-info/top_level.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai_assignments/bayesian_nets/construct_a_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments/bayesian_nets/construct_a_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ai_assignments_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ai_assignments_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai_assignments/bayesian_nets/exact_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_assignments/bayesian_nets/exact_inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai_assignments/bayesian_nets/q1/burglary_title.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +38,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.exact_inference">
     <configuration name="construct_a_net" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_assignment_5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,8 +61,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="exact_inference" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai_assignment_5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_assignments/bayesian_nets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ai_assignments/bayesian_nets/exact_inference.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.exact_inference" />
         <item itemvalue="Python.construct_a_net" />
       </list>
     </recent_temporary>
@@ -85,6 +101,7 @@
       <workItem from="1641408050611" duration="1989000" />
       <workItem from="1641416950507" duration="174000" />
       <workItem from="1641417171841" duration="512000" />
+      <workItem from="1641492259477" duration="7115000" />
     </task>
     <servers />
   </component>
@@ -107,14 +124,20 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ai_assignments/bayesian_nets/construct_a_net.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/ai_assignments/bayesian_nets/exact_inference.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="outcome[False]" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ai_assignment_5$construct_a_net.coverage" NAME="construct_a_net Coverage Results" MODIFIED="1641417657419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_assignments/bayesian_nets" />
+    <SUITE FILE_PATH="coverage/ai_assignment_5$construct_a_net.coverage" NAME="construct_a_net Coverage Results" MODIFIED="1641494586267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_assignments/bayesian_nets" />
+    <SUITE FILE_PATH="coverage/ai_assignment_5$exact_inference.coverage" NAME="exact_inference Coverage Results" MODIFIED="1641503589454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ai_assignments/bayesian_nets" />
   </component>
 </project>
